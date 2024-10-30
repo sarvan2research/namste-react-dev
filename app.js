@@ -2,6 +2,7 @@
 <div id=parent>
 <div id=child>
 <h1>This H1 tag via div's</h1>
+<h2>This H1 tag via div's</h2>
 </div>
 </div>
 */
@@ -12,7 +13,8 @@ const parent=React.createElement(
   React.createElement(
     "div",
     {id:"child"},
-    React.createElement("h1",{},"This H1 tag via parent/child div's")
+    [React.createElement("h1",{},"This H1 tag via parent/child div's"),
+    React.createElement("h2",{},"This H2 tag via parent/child div's")]
   )
 );
 
