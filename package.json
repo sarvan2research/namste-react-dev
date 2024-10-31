@@ -1,0 +1,22 @@
+{
+  "name": "namste-react-dev",
+  "version": "1.0.0",
+  "description": "First npm based react project",
+  "main": "app.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sarvan2research/namste-react-dev.git"
+  },
+  "author": "saravanakumar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sarvan2research/namste-react-dev/issues"
+  },
+  "homepage": "https://github.com/sarvan2research/namste-react-dev#readme",
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}

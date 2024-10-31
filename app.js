@@ -1,16 +1,3 @@
-/*
-<div id=parent>
-  <div id=child>
-    <h1>This H1 tag via div's</h1>
-    <h2>This H1 tag via div's</h2>
-  </div>
-  <div id=child>
-    <h1>This H1 tag via div's</h1>
-    <h2>This H1 tag via div's</h2>
-  </div>
-</div>
-*/
-
 const parent=React.createElement(
   "div",
   {id:"parent"},
