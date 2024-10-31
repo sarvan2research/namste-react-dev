@@ -73,6 +73,11 @@ https://github.com/nvm-sh/nvm?tab=readme-ov-file#install--update-script
 https://medium.com/@priscillashamin/how-to-install-and-configure-nvm-on-mac-os-43e3366c75a6
 
 
+# Usage of npm shortcuts
+
+"start": "parcel index.html", npm run start or npm start
+ "build": "parcel build index.html", npm run build
+
 
 
 

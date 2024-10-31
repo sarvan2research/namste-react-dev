@@ -1,5 +1,5 @@
 import React from "react";
-import ReactDOM from "react-dom";
+import ReactDOM from "react-dom/client";
 
 const parent=React.createElement(
   "div",
@@ -20,4 +20,4 @@ const parent=React.createElement(
 console.log(parent);
 
 const rootDom=ReactDOM.createRoot(document.getElementById("root")); // Dom used to update element on screen.
-rootDom.render(parent); // return js object to html element
+rootDom.render(parent); // return js object to html elementxxs
