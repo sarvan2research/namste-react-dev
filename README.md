@@ -78,6 +78,57 @@ https://medium.com/@priscillashamin/how-to-install-and-configure-nvm-on-mac-os-4
 "start": "parcel index.html", npm run start or npm start
  "build": "parcel build index.html", npm run build
 
+# JSX
+
+JSX is html like syntax not html code
+
+heading= React.CreateElement("h1", {id:"test"},"Hellow React")
+
+- names is camelCase className not classname
+- multi line needs to be in () or ""
+- Insides jsx {js varible} used with {} braces
+- Trick jsxheading is js object can be injeced using {jsxheading}
+- As element is js it needs to initialized first before it can be used.
+- Ugly we can add up cyclic dependency by add jsx to another , browser hangs
+
+
+jsxheading= <h1 id="test">Hellow Reack via JSX </h1>
+
+
+# Babel
+- babel transpile to react.createlement,
+- Convert legacy code.
+JS engine dont understand jsx code, babel used to convert to jsx code to js undestandble code.
+- Babel helpful protecting cross site scripting attack, data sanitization handled by babel
+
+# React Components
+
+- React Class Component (Legact not advisable)
+
+
+
+
+- React Functional Component
+	- name needs to start with capital
+	- it can used by <Title /> babel converts it to react element
+	- 
+
+- React Element
+	- 
+
+
+
+
+
+
+
+Plugins:
+- prettier
+- bracket pair
+- eslint
+- better comments
+
+
 
 
 
