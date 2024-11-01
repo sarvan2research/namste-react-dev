@@ -99,7 +99,8 @@ jsxheading= <h1 id="test">Hellow Reack via JSX </h1>
 - babel transpile to react.createlement,
 - Convert legacy code.
 JS engine dont understand jsx code, babel used to convert to jsx code to js undestandble code.
-- Babel helpful protecting cross site scripting attack, data sanitization handled by babel
+- Babel helpful protecting cross site scripting attack, data sanitization handled by babel.
+
 
 # React Components
 
@@ -111,10 +112,12 @@ JS engine dont understand jsx code, babel used to convert to jsx code to js unde
 - React Functional Component
 	- name needs to start with capital
 	- it can used by <Title /> babel converts it to react element
-	- 
-
-- React Element
-	- 
+	- visit this commit for detailed working b3007dcc19a5f9bea6c6f525ca63db561c1a061b
+	- Same way of using js object
+		- const Title=()=> <h1>Hellow from title test</h1>
+		- {Title()}
+		- <Title />
+		- <Title></Title> 
 
 
 
