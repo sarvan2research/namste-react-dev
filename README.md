@@ -120,10 +120,13 @@ JS engine dont understand jsx code, babel used to convert to jsx code to js unde
 		- <Title></Title> 
 
 
+- Props:
+ - Passing arguments to function
+ - inside props keys is mandatory when we pass list otherwise react render all the component in that level
+ - Dont use index as key its anti-pattern and cause issues.
 
-
-
-
+Config driven UI:
+- UI driven based on location , Usecase: swiggyUI
 
 Plugins:
 - prettier
