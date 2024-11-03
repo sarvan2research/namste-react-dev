@@ -792,7 +792,7 @@ const BodyContainer=()=>(
     <div className="search-component">Search</div>
     <div className="rest-container">
       {resList.map(restaurant=>(
-        <RestCards restData={restaurant}/>
+        <RestCards key={restaurant.info.id}restData={restaurant}/>
       )
       )}
       </div>
