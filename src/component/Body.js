@@ -12,16 +12,10 @@ const BodyContainer=()=>{
   const fetchData=async ()=> {
   const data=await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=12.8986941&lng=77.576426&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING")  
     const json =await data.json();
-    //console.log(json)
-    //console.log(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants)
     setRestaurant(json.data.cards[4].card.card.gridElements.infoWithStyle.restaurants)
   }
-  //Conditional Rendering
-  if (restaurantList.length===0){
-    return <Shimmer/>
-  }
   
-  return(<div className="body-container">
+  return restaurantList.length===0? <Shimmer/>: (<div className="body-container">
     <div className="search-component">
       <button className="filter-btn" onClick={()=>{
         const filteredList=restaurantList.filter(
