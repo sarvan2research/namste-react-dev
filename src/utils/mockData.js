@@ -1,24 +1,3 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-
-/*
-AppLayout
-  Header
-    - Logo
-    - Nav Items
-  Body
-  - Search bar
-  - RestroContainer
-    - Restro Cards
-  Footer
-    - Copyright
-    - Contact
-    - Links
-    - Address
-*/
-
-const CDN_URL="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/"
-
 const resList= [
   {
     "info": {
@@ -760,59 +739,4 @@ const resList= [
   }
 ]
 
-const AppLayout=()=>(
-  <div className="app">
-    <div className="header-container">
-    <HeaderContainer/>
-    </div>
-    <div className="body-container">
-      <BodyContainer/>
-    </div>
-  </div>
-)
-const HeaderContainer=() =>(
-  <div className="header">
-    <div className="logo-container">
-      <img className="logo"src="https://c7.alamy.com/comp/GPX74M/college-finder-meaning-search-out-and-pinpoint-GPX74M.jpg"></img>
-    </div>
-    <div className="nav-container-item">
-        <ul>
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Contact Us</li>
-          <li>Cart</li>
-        </ul>
-    </div>
-  </div>
-)
-
-
-const BodyContainer=()=>(
-  <div className="body-container">
-    <div className="search-component">Search</div>
-    <div className="rest-container">
-      {resList.map(restaurant=>(
-        <RestCards key={restaurant.info.id}restData={restaurant}/>
-      )
-      )}
-      </div>
-  </div>
-)
-
-const RestCards=(props)=>{
-  const {restData}=props;
-  const {info}=restData
-  const{name,cloudinaryImageId,cuisines,avgRating,costForTwo}=info
-    return (
-    <div className="card-container" style={{background:"#f0f0f0"}}>
-      <img className="res-logo" src={CDN_URL+cloudinaryImageId}></img>
-      <h3>{name}</h3>
-      <h4>{cuisines.join(", ")}</h4>
-      <h4>{avgRating}</h4>
-      <h4>{costForTwo}</h4>
-    </div>
-  )
-}
-  
-const rootDom=ReactDOM.createRoot(document.getElementById("root")); // Dom used to update element on screen.
-rootDom.render(<AppLayout />); // return js object to html elementxxs
+export default resList;
