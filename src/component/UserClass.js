@@ -7,11 +7,17 @@ class UserClass extends React.Component {
       count: 0,
       count2: 2,
     };
+    console.log(this.props.name + "Cosntructor Called");
+  }
+
+  componentDidMount() {
+    console.log(this.props.name + "Component Did Mount Called");
   }
 
   render() {
     const { name, location } = this.props;
     const { count, count2 } = this.state;
+    console.log(this.props.name + "Render Method ccalled");
     return (
       <div className="user-container">
         <h2>Name of the Developer:{name}</h2>
