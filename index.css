@@ -58,3 +58,7 @@
 .top-btn{
   margin: 5px;
 }
+.user-container{
+  padding: 5px;
+  border: 1px solid black;
+}
