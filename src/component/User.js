@@ -1,8 +1,22 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const User = ({ name, location }) => {
   const [count] = useState(0);
   const [count1] = useState(2);
+
+  useEffect(() => {
+    console.log(name + "from fucntional component");
+    timer = setInterval(() => {
+      console.log("Func delayed for 1 second.");
+    }, "1000");
+
+    return () => {
+      console.log(
+        "Cleanup called once per screen change also reason for async is not available for useEffect"
+      );
+      clearInterval(timer);
+    };
+  }, []);
 
   return (
     <div className="user-container">

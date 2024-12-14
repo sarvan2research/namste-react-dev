@@ -18,8 +18,10 @@ class About extends Component {
         <h1>Its Namaste React Test page</h1>
         <h2>From Bangalore</h2>
         <h3>Learning space</h3>
-        <UserClass name={"First"} location={"BLR"} />
-        <UserClass name={"Second"} location={"BLR"} />
+        {/* <UserClass name={"First Component from classy"} location={"BLR"} />
+        <UserClass name={"Second from Classy"} location={"BLR"} /> */}
+
+        <User name={"Functional Component"} location={"BLR"} />
       </div>
     );
   }
