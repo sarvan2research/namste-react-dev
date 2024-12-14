@@ -6,15 +6,15 @@ const User = ({ name, location }) => {
 
   useEffect(() => {
     console.log(name + "from fucntional component");
-    timer = setInterval(() => {
-      console.log("Func delayed for 1 second.");
-    }, "1000");
+    // timer = setInterval(() => {
+    //   console.log("Func delayed for 1 second.");
+    // }, "1000");
 
     return () => {
-      console.log(
-        "Cleanup called once per screen change also reason for async is not available for useEffect"
-      );
-      clearInterval(timer);
+      // console.log(
+      //   "Cleanup called once per screen change also reason for async is not available for useEffect"
+      // );
+      // clearInterval(timer);
     };
   }, []);
 

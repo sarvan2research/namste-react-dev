@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import { HOME_URL } from "../utils/constants";
 import { Link } from "react-router-dom";
+import useOnlineStatus from "../utils/useOnlineStatus";
 
 const BodyContainer = () => {
   const [restaurantList, setRestaurant] = useState([]);
@@ -11,6 +12,7 @@ const BodyContainer = () => {
   useEffect(() => {
     fetchData();
   }, []);
+
   const fetchData = async () => {
     const data = await fetch(HOME_URL);
     // Without cors plugin how to hit from local
@@ -23,6 +25,11 @@ const BodyContainer = () => {
       json.data?.cards[4]?.card?.card?.gridElements?.infoWithStyle?.restaurants
     );
   };
+  const isOnlineStatus = useOnlineStatus();
+  console.log("Use online status: " + isOnlineStatus);
+  if (isOnlineStatus === false) {
+    return <h1>You looks offline , plz check your internet connection</h1>;
+  }
 
   return restaurantList.length === 0 ? (
     <Shimmer />

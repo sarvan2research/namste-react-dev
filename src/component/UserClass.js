@@ -21,9 +21,9 @@ class UserClass extends React.Component {
 
     console.log(this.props.name + "Component Did Mount Called");
 
-    this.timer = setInterval(() => {
-      console.log("Classy delayed for 1 second.");
-    }, "1000");
+    // this.timer = setInterval(() => {
+    //   console.log("Classy delayed for 1 second.");
+    // }, "1000");
   }
 
   componentDidUpdate() {
@@ -32,7 +32,7 @@ class UserClass extends React.Component {
 
   componentWillUnmount() {
     console.log(this.props.name + "componentWillUnmount");
-    clearInterval(this.timer);
+    // clearInterval(this.timer);
   }
 
   render() {
