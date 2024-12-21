@@ -5,13 +5,13 @@ import useOnlineStatus from "../utils/useOnlineStatus";
 
 const HeaderContainer = () => {
   const [buttonName, setButtonName] = useState("Login");
-  console.log("Header Called");
+  //console.log("Header Called");
   // If no dependency its called on each renders.
   // If Empty Array its called only once when first time screen renders
   // If any state variable given then only called when its getting changed.
   const isOnline = useOnlineStatus();
   useEffect(() => {
-    console.log("Header called inside UseEffect");
+    //console.log("Header called inside UseEffect");
   }, [buttonName]);
 
   return (
