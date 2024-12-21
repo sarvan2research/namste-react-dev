@@ -1,12 +1,13 @@
 import { useState } from "react";
 import ItemList from "./ItemList";
 
-const RestaurtantCategories = ({ data }) => {
+const RestaurtantCategories = ({ data, isShowIndex, setSelectedIndex }) => {
   //console.log(data);
-  const [showItems, setShowItems] = useState(false);
+  //const [showItems, setShowItems] = useState(false);
 
   const handleClick = () => {
-    setShowItems(!showItems);
+    //setShowItems(!showItems);
+    setSelectedIndex();
   };
 
   return (
@@ -22,7 +23,7 @@ const RestaurtantCategories = ({ data }) => {
           </span>
           <span>⬇️</span>
         </div>
-        <div>{showItems && <ItemList items={data.itemCards} />}</div>
+        <div>{isShowIndex && <ItemList items={data.itemCards} />}</div>
       </div>
     </div>
   );
